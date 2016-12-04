@@ -1,0 +1,524 @@
+@font-face {
+    font-family: 'camcorder_monospacedregular';
+    src: url('../fonts/camcorder_ms_reg-webfont.woff2') format('woff2'),
+    url('../fonts/camcorder_ms_reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'camcorder_monospacedinverse';
+    src: url('../fonts/camcorder_ms_inv-webfont.woff2') format('woff2'),
+    url('../fonts/camcorder_ms_inv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+    url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #191919;
+    color: #ffffff;
+    font-family: 'source_sans_proregular', sans-serif;
+}
+
+a {
+    display: block;
+}
+
+header {
+    background: black;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    position: fixed;
+    z-index: 1;
+    font-family: 'camcorder_monospacedregular', sans-serif;
+}
+
+header a {
+    color: white;
+    display: inline;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+section h1 {
+    text-align: center;
+}
+
+nav {
+    float: right;
+    font-size: 15px;
+}
+
+nav a {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h1 {
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    font-size: 36px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    transition: background-color .5s, color .5s;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s, color .5s;
+}
+
+a:visited {
+
+}
+
+.artistName {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 250ms;
+    background-color: black;
+    height: 24px;
+}
+
+#artists a {
+    text-decoration: none;
+    color: white;
+    transition: background-color .5s, color .5s;
+}
+
+#artists a:hover {
+    background-color: transparent;
+}
+
+#artist1Name {
+    top: 140px;
+    left: 200px;
+}
+
+#artist2Name {
+    top: 60px;
+    left: 220px;
+}
+
+#artist3Name {
+    top: 60px;
+    left: 0px;
+    height: 48px;
+}
+
+#artist4Name {
+    top: 250px;
+    left: 12px;
+}
+
+#artist1:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist2:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist3:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist4:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+.galleyContainer {
+    margin-left: 84px;
+    margin-right: 84px;
+}
+.identity {
+    float: left;
+}
+
+.backgroundInfo {
+    width: 642px;
+    text-align: justify;
+    line-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.artistbackgroundInfo {
+    background-color: #191919;
+    height: 300px;
+}
+
+.artistbackgroundInfo h1 {
+    margin-bottom: 10px;
+
+}
+
+.artistbackgroundInfo p {
+    margin-bottom: 10px;
+    line-height: 20px;
+
+}
+
+.artistbackgroundInfo a {
+
+}
+
+.artistbackgroundInfo img {
+    float: left;
+    margin-right: 30px;
+
+}
+
+.modalContainer {
+    padding: 50px;
+}
+
+#about h1, #artists h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#artists {
+    margin-top: 100px;
+}
+
+#artist1 h1, #artist2 h1, #artist3 h1, #artist4 h1 {
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.leftParagraph, .rightParagraph {
+    width: 306px;
+}
+
+.backgroundInfo p {
+    margin-bottom: 10px;
+}
+
+.leftFloat {
+    float: left;
+}
+
+.rightFloat {
+    float: right;
+}
+
+.artistsLeft {
+    margin-left: 84px;
+}
+
+.artistsRight {
+    margin-right: 138px;
+}
+
+.colorbar {
+    width: 100%;
+    height: 5px;
+}
+
+.colorquote {
+    height: 500px;
+    position: relative;
+}
+
+.colorquote .ntsc {
+    height: 500px;
+}
+
+.ntsc {
+    display: inline-block;
+    width: 16.66%;
+    height: 3px;
+    float: left;
+}
+
+.ntscY {
+    background-color: #ffff00;
+}
+
+.ntscC {
+    background-color: #00ffff;
+}
+
+.ntscG {
+    background-color: #00ff00;
+}
+
+.ntscM {
+    background-color: #ff00ff;
+}
+
+.ntscR {
+    background-color: #ff0000;
+}
+
+.ntscB {
+    background-color: #0000ff;
+}
+
+.clear {
+    clear: both;
+}
+
+.quoteContainer {
+    position: absolute;
+    left: 16.66%;
+    right: 16.66%;
+    top: 45%;
+}
+
+.column1, .column3 {
+    width: 222px;
+    float: left;
+}
+.column1 a, .column2 a, .column3 a {
+    margin-bottom: 30px;
+}
+
+.column1 {
+    margin-right: 30px;
+}
+
+.column2 {
+    width: 306px;
+    margin-right: 30px;
+    float: left;
+}
+
+#artists {
+    margin-bottom: 200px;
+}
+
+#artist1, #artist2, #artist3, #artist4 {
+    position: relative;
+}
+
+#artist1 {
+    width: 488px;
+    height: 305px;
+    margin-bottom: 30px;
+    background-image: url("../images/artists/artist1.png");
+    background-repeat: no-repeat;
+}
+
+#artist2 {
+    width: 390px;
+    height: 145px;
+    margin-left: 99px;
+    background-image: url("../images/artists/artist2.png");
+    background-repeat: no-repeat;
+
+}
+
+#artist3 {
+    width: 222px;
+    height: 173px;
+    margin-bottom: 30px;
+    background-image: url("../images/artists/artist3.png");
+    background-repeat: no-repeat;
+
+}
+
+#artist4 {
+    width: 222px;
+    height: 358px;
+    background-image: url("../images/artists/artist4.png");
+    background-repeat: no-repeat;
+}
+
+#videos {
+    height: 500px;
+}
+
+#about {
+    margin-bottom: 200px;
+}
+
+#content {
+    padding-top: 90px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#quote {
+
+}
+
+#quote p {
+    font-family: 'camcorder_monospacedinverse', sans-serif;
+    color: black;
+    background-color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#quote cite {
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    color: black;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-left: 18.5%;
+}
+
+#gallery {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+#gallery a:hover {
+    background-color: transparent;
+    opacity: .5;
+    transition: opacity 500ms;
+
+}
+
+#gallery a {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+#gallery h1 {
+    margin-bottom: 50px;
+
+}
+
+#galleryVideo1 {
+    height: 173px;
+    background-image: url(../images/gallery/video1.png);
+}
+
+#galleryVideo2 {
+    height: 173px;
+    background-image: url(../images/gallery/video2.png);
+}
+
+#galleryVideo3 {
+    height: 173px;
+    background-image: url(../images/gallery/video3.png);
+}
+
+#galleryVideo4 {
+    height: 238px;
+    background-image: url(../images/gallery/video4.png);
+}
+
+#galleryVideo5 {
+    height: 251px;
+    background-image: url(../images/gallery/video5.png);
+}
+
+#galleryVideo6 {
+    height: 173px;
+    background-image: url(../images/gallery/video6.png);
+}
+
+#galleryVideo7 {
+    height: 173px;
+    background-image: url(../images/gallery/video7.png);
+}
+
+#galleryVideo8 {
+    height: 173px;
+    background-image: url(../images/gallery/video8.png);
+}
+
+#galleryVideo9a {
+    height: 173px;
+    background-image: url(../images/gallery/video9a.png);
+}
+
+#galleryVideo9b {
+    height: 238px;
+    background-image: url(../images/gallery/video9b.png);
+}
+
+#galleryVideo9c {
+    height: 173px;
+    background-image: url(../images/gallery/video9c.png);
+}
+
+footer .column {
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+footer {
+    background-color: black;
+}
+
+footer .column h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    background-color: white;
+}
+
+footer .column a {
+    margin-bottom: 5px;
+}
+
+footer .columnRight {
+    padding-right: 0px;
+}
+
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 87.5%; /* 280 pixels at a 320 pixel screen width (iPhone 3 / 4 / 5) */
+    }
+
+    #content {
+        width: 87.5%;
+    }
+}
+
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 93.75%; /* 720 pixels at a 768 pixel screen width (iPads) */
+    }
+
+    #content {
+        width: 93.75%;
+    }
+}
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1024px) {
+    .container {
+        /*width:95.5%;*/
+        width: 978px;
+        /*width: 66.66%;*/
+    }
+}
