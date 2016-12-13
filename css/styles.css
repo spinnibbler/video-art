@@ -31,6 +31,28 @@ body {
 
 a {
     display: block;
+    text-decoration: none;
+    color: white;
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    transition: background-color .5s, color .5s;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s, color .5s;
+}
+
+a:visited {
+
+}
+
+svg {
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.9);
 }
 
 header {
@@ -39,7 +61,7 @@ header {
     height: 64px;
     line-height: 64px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     font-family: 'camcorder_monospacedregular', sans-serif;
 }
 
@@ -71,21 +93,35 @@ h1 {
     font-size: 36px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-family: 'camcorder_monospacedregular', sans-serif;
-    transition: background-color .5s, color .5s;
+footer .column {
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-top: 30px;
 }
 
-a:hover {
-    background-color: white;
+footer {
+    background-color: black;
+}
+
+footer .column h2 {
     color: black;
-    transition: background-color .5s, color .5s;
+    margin-bottom: 10px;
+    font-family: 'camcorder_monospacedregular', sans-serif;
+    background-color: white;
 }
 
-a:visited {
+footer .column a {
+    margin-bottom: 5px;
+}
 
+footer .columnRight {
+    padding-right: 0px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 978px;
 }
 
 .artistName {
@@ -96,65 +132,33 @@ a:visited {
     height: 24px;
 }
 
-#artists a {
-    text-decoration: none;
-    color: white;
-    transition: background-color .5s, color .5s;
+.featuredContainer .column1 {
+    width: 306px;
+    margin-right: 30px;
 }
 
-#artists a:hover {
-    background-color: transparent;
+.featureVideo {
+    background-color: blue;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-#artist1Name {
-    top: 140px;
-    left: 200px;
+.featureVideo video {
+    width: 100%;
 }
 
-#artist2Name {
-    top: 60px;
-    left: 220px;
+.videoframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-#artist3Name {
-    top: 60px;
-    left: 0px;
-    height: 48px;
-}
-
-#artist4Name {
-    top: 250px;
-    left: 12px;
-}
-
-#artist1:hover .artistName {
-    opacity: 1;
-    transition: opacity 250ms;
-}
-
-#artist2:hover .artistName {
-    opacity: 1;
-    transition: opacity 250ms;
-}
-
-#artist3:hover .artistName {
-    opacity: 1;
-    transition: opacity 250ms;
-}
-
-#artist4:hover .artistName {
-    opacity: 1;
-    transition: opacity 250ms;
-}
-
-.container{
-    margin-left: auto;
-    margin-right: auto;
-}
 .galleyContainer {
     margin-left: 84px;
     margin-right: 84px;
 }
+
 .identity {
     float: left;
 }
@@ -196,21 +200,6 @@ a:visited {
 
 .modalContainer {
     padding: 50px;
-}
-
-#about h1, #artists h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#artists {
-    margin-top: 100px;
-}
-
-#artist1 h1, #artist2 h1, #artist3 h1, #artist4 h1 {
-    font-family: 'camcorder_monospacedregular', sans-serif;
-    font-size: 24px;
-    text-align: center;
 }
 
 .leftParagraph, .rightParagraph {
@@ -286,17 +275,11 @@ a:visited {
     clear: both;
 }
 
-.quoteContainer {
-    position: absolute;
-    left: 16.66%;
-    right: 16.66%;
-    top: 45%;
-}
-
 .column1, .column3 {
     width: 222px;
     float: left;
 }
+
 .column1 a, .column2 a, .column3 a {
     margin-bottom: 30px;
 }
@@ -309,6 +292,42 @@ a:visited {
     width: 306px;
     margin-right: 30px;
     float: left;
+}
+.featuredContainer a {
+    margin-bottom: 0px;
+
+}
+
+#quoteContainer {
+    position:relative;
+    height:100%;
+}
+
+#quoteContainer p {
+    position:absolute;
+    width:684px;
+    top:50%;
+    left:50%;
+    font-size:60px;
+    margin-top:-60px;
+    margin-left:-342px;
+    text-align:center;
+    font-family: 'camcorder_monospacedinverse', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+#quoteContainer cite {
+    position:absolute;
+    /*width:300px;*/
+    top:50%;
+    left:50%;
+    /*font-size:16px;*/
+    margin-top:15px;
+    margin-left:-100px;
+    text-align:center;
+    display: block;
+    background-color: white;
 }
 
 #artists {
@@ -353,7 +372,8 @@ a:visited {
 }
 
 #videos {
-    height: 500px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 #about {
@@ -366,27 +386,10 @@ a:visited {
     margin-left: auto;
 }
 
-#quote {
-
-}
-
-#quote p {
-    font-family: 'camcorder_monospacedinverse', sans-serif;
-    color: black;
-    background-color: white;
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 #quote cite {
     font-family: 'camcorder_monospacedregular', sans-serif;
     color: black;
     font-size: 24px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    margin-left: 18.5%;
 }
 
 #gallery {
@@ -467,58 +470,186 @@ a:visited {
     background-image: url(../images/gallery/video9c.png);
 }
 
-footer .column {
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-top: 30px;
+#video1 {
+    width: 306px;
+    height: 230px;
+    position: relative;
 }
 
-footer {
-    background-color: black;
+#video1 video, #video2 video,#video6 video,#video7 video {
+    width: 100%;
+    left: 0;
+    top: 1px;
+    position: absolute;
 }
 
-footer .column h2 {
-    color: black;
-    margin-bottom: 10px;
+#video2 {
+    width: 306px;
+    height: 230px;
+    position: relative;
+
+}
+
+#video3 {
+    width: 306px;
+    margin-bottom: 30px;
+
+}
+
+#video4, #video8 {
+    width: 138px;
+    float: left;
+    margin-right: 30px;
+}
+
+#video5, #video9 {
+    width: 138px;
+    float: left;
+}
+
+#video6 {
+    width: 306px;
+    height: 230px;
+    position: relative;
+}
+
+#video7 {
+    width: 306px;
+    height: 230px;
+    position: relative;
+}
+
+#artists a {
+    text-decoration: none;
+    color: white;
+    transition: background-color .5s, color .5s;
+}
+
+#artists a:hover {
+    background-color: transparent;
+}
+
+#artist1Name {
+    top: 140px;
+    left: 200px;
+}
+
+#artist2Name {
+    top: 60px;
+    left: 220px;
+}
+
+#artist3Name {
+    top: 60px;
+    left: 0px;
+    height: 48px;
+}
+
+#artist4Name {
+    top: 250px;
+    left: 12px;
+}
+
+#artist1:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist2:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist3:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#artist4:hover .artistName {
+    opacity: 1;
+    transition: opacity 250ms;
+}
+
+#about h1, #artists h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#artists {
+    margin-top: 100px;
+}
+
+#artist1 h1, #artist2 h1, #artist3 h1, #artist4 h1 {
     font-family: 'camcorder_monospacedregular', sans-serif;
-    background-color: white;
-}
-
-footer .column a {
-    margin-bottom: 5px;
-}
-
-footer .columnRight {
-    padding-right: 0px;
+    font-size: 24px;
+    text-align: center;
 }
 
 /* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 767px) {
+/*@media only screen and (max-width: 767px) {
     .container {
         width: 87.5%; /* 280 pixels at a 320 pixel screen width (iPhone 3 / 4 / 5) */
+    /*}*/
+
+   /* #content {
+        width: 100%;
     }
 
-    #content {
-        width: 87.5%;
+    .leftParagraph, .rightParagraph {
+        width: 100%;
     }
-}
+}*/
 
 /* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/*@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
         width: 93.75%; /* 720 pixels at a 768 pixel screen width (iPads) */
+    /*}*/
+
+    /*#content {
+        width: 100%;
     }
 
-    #content {
-        width: 93.75%;
+    h1 {
+        font-size: 1.5em;
     }
-}
+
+    header {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .featuredContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .featuredContainer .column1 {
+        width: 50%;
+        margin-left: 0px;
+    }
+
+    .featuredContainer .column2 {
+        display: none;
+    }
+
+    .featuredContainer .column3 {
+    margin-right: 0px;
+    }
+
+
+    #video1, #video2 {
+
+    }
+
+    .featureVideo {
+
+    }
+}*/
 
 /* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 1024px) {
+/*@media only screen and (min-width: 1024px) {
     .container {
-        /*width:95.5%;*/
         width: 978px;
-        /*width: 66.66%;*/
     }
-}
+}*/
